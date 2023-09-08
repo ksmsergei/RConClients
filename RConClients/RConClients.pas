@@ -99,7 +99,7 @@ type
     property Connected: Boolean read GetConnected;
 
     procedure Connect; overload; virtual;
-    procedure Connect(AHost: string; APort: Integer); overload;
+    procedure Connect(AHost: string; APort: Word); overload;
     procedure Disconnect;
 
     // Prepared RCon requests
@@ -342,7 +342,7 @@ begin
   FIdTcpClient.Connect;
 end;
 
-procedure TRConClient.Connect(AHost: string; APort: Integer);
+procedure TRConClient.Connect(AHost: string; APort: Word);
 begin
   Host := AHost;
   Port := APort;
